@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
+import castles from './castlesReducer';
 
-
-export default combineReducers({});
+export default combineReducers({
+  castles
+});
 

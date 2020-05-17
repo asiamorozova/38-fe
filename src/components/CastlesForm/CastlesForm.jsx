@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import postCastle from '../../services/castlesApi';
+import { addCastle } from '../../actions/castlesActions';
 
 //has name, year, image, description 
 const Castles = () => {
+  const dispatch = useDispatch();
+
   const [name, setName] = useState('');
   const [year, setYear] = useState('');
   const [image, setImage] = useState('');
@@ -14,11 +17,11 @@ const Castles = () => {
   const handleSubmit = event => {
     event.preventDefault();
     //send back-end a post request (service)
-    postCastle({ name, year, setDescription, image })
+    postCastle({ name, year, description, image })
       .then(castle  => {
-      
+        //after a response add the habit to redux (reducer, action, possibly selectors)
+        dispatch(addCastle(castle));
       }); 
-    //after a response add the habit to redux (reducer, action, possibly selectors)
   };
 
   return (
