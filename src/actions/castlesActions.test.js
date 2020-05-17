@@ -1,3 +1,5 @@
+import { addCastle } from './castlesActions';
+
 describe('castles actions', () => {
   it('creates a ADD_CASTLE action', () => {
     const action = addCastle({ 
