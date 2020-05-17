@@ -1,5 +1,5 @@
 export const postCastle = castle => {
-  return fetch('http://localhost:7890/api/v1/castles'), {
+  return fetch(`${process.env.API_URl}/api/v1/castles`), {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
