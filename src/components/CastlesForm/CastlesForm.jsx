@@ -10,7 +10,7 @@ const Castles = () => {
   const [name, setName] = useState('');
   const [year, setYear] = useState('');
   const [image, setImage] = useState('');
-  const [description, setDescription] = useState(1);
+  const [description, setDescription] = useState('');
     
   //eventually use hooks 
 
